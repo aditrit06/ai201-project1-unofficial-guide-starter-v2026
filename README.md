@@ -109,27 +109,31 @@ The bad: known damp problem on the ground floor; two rooms were taken offline in
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:** How are juniors and seniors ordered in the housing lottery?
 
 **Answer:**
-
 ```
+Juniors and seniors are ordered by accumulated credit hours first, with a random tie-break used if needed (admin_housing_lottery.txt).
+
+Sources retrieved: admin_housing_lottery.txt, admin_parking_permits.txt, advising_registration.txt, housing_morrow_house.txt, housing_tamsin_court.txt
 ```
 
-**My relevance cutoff:**
+**My relevance cutoff:** 0.6
 
-<!-- The number you set in config.py, and how you got there.
-
-     You ran five questions your corpus covers and the five in OUT_OF_SCOPE
-     that it clearly doesn't, and wrote down the best distance for each. What
-     did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
-
-     Milestone 4. -->
+I chose a cutoff of 0.6 after comparing the best distances for five questions that the corpus covers with five questions that are out of scope. The in-corpus distances ranged from 0.1975 to 0.4114, while the out-of-scope distances ranged from 0.8246 to 0.9340. There was a large gap between the highest in-corpus distance, 0.4114, and the lowest out-of-scope distance, 0.8246. A cutoff of 0.6 falls within this gap and correctly accepted all five in-corpus questions while refusing all five out-of-scope questions.
 
 | Question | In corpus? | Best distance |
-|---|---|---|
-|  |  |  |
+|---|---|---:|
+| How are juniors and seniors ordered in the housing lottery? | Yes | 0.2250 |
+| What percentage of the CS 210 grade are labs worth? | Yes | 0.3856 |
+| How long are wait times at Kestrel Commons between 12:15 and 1:00? | Yes | 0.2197 |
+| How quickly do student permits for the west parking lots sell out? | Yes | 0.1975 |
+| How often does the campus shuttle run on weekends? | Yes | 0.4114 |
+| What is the capital of Mongolia? | No | 0.8246 |
+| How do I change the oil in a diesel engine? | No | 0.9340 |
+| Who won the 1994 World Cup? | No | 0.8859 |
+| What is the recommended dosage of ibuprofen for a headache? | No | 0.8442 |
+| How do I write a for loop in Rust? | No | 0.8907 |
 
 ## How I Used AI
 

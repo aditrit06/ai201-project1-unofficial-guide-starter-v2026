@@ -24,7 +24,8 @@ contains the answer.
 
 **Why this target:**
 <!-- e.g. "One of my questions is about a topic only two documents mention, so
-     I expect that one to be hard." -->
+     I expect that one to be hard." --> I chose 4 out of 5 because my questions cover different types of campus information which include housing, parking, courses, dining, and transportation. I want the system to retrieve the correct information for most of these topics while allowing for one question to be more difficult to retrieve.
+
 
 ---
 
@@ -34,8 +35,7 @@ Every answer the system produces names at least one source document.
 
 **Why this target:**
 <!-- Why all five and not four? What about your setup makes that achievable —
-     or what would have to go wrong for it not to be? -->
-
+     or what would have to go wrong for it not to be? -->  I chose every answer because the corpus contains many documents on similar campus topics. Naming at least one source for every answer makes it possible to check where the information came from.
 ---
 
 ## 3. The relevance gate stops out-of-corpus questions
@@ -51,47 +51,30 @@ in at least 4 of 5 tries.
 
 **Why this target:**
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
-     Was there a clean gap, or did the two groups overlap? -->
+     Was there a clean gap, or did the two groups overlap? --> I chose 4 out of 5 because the system should reject most questions that are clearly unrelated to campus life. I allowed one failure because the relevance gate may occasionally retrieve a campus document that happens to contain similar words.
 
 ---
 
 ## 4. Something about your chunks
 
-<!-- YOU WRITE THIS ONE.
-
-     How would you know if your chunks were the right size? Name something
-     countable or observable.
-
-     Examples of the right shape — don't copy these, they should come from
-     what you actually saw in Milestone 3:
-       - "At least 4 of 5 sampled chunks read as a complete thought, with no
-          sentence cut in half at either end."
-       - "No chunk is shorter than 200 characters, since anything below that
-          in my corpus turned out to be a heading with no content under it." -->
+<!-- At least 4 of 5 sampled chunks should contain a complete thought that can be understood without needing another chunk to finish the sentence.
 
 
 
 **Why this target:**
-
+The campus life documents I read are short and usually explain useful information in one or two sentences. I chose 4 out of 5 because most chunks should preserve enough context to understand the information, while allowing one chunk to split information in a less useful place.
 
 
 ---
 
-## 5. Your choice
+## 5. Sources support the answer
 
-<!-- YOU WRITE THIS ONE TOO.
-
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
+<!-- For at least 4 of my 5 test questions, at least one source named by the system must contain information that supports the answer it gives.
 
 
 
 **Why this target:**
-
-
+The corpus contains several documents with related topics, such as multiple housing, dining, and course documents. I chose 4 out of 5 because I want the cited sources to actually support the answers, while allowing for one retrieval mistake among similar documents.
 
 ---
 

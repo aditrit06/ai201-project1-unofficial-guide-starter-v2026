@@ -25,7 +25,8 @@
      questions your system answers. Write it for someone who has never seen
      this repo.
 
-     Milestone 5. -->
+     Milestone 5. --> 
+     This project is a retrieval-augmented question-answering system for campus life information. It loads documents from the campus_life corpus, splits them into paragraph-based chunks, creates embeddings, and retrieves the most relevant chunks for a user's question. The system uses a relevance cutoff to avoid answering questions that are not covered by the documents. When enough relevant information is found, the model answers using only the retrieved documents and names the source it used.
 
 ## Chunking Strategy
 
@@ -146,9 +147,9 @@ I chose a cutoff of 0.6 after comparing the best distances for five questions th
 
      Milestone 5. -->
 
-**1.**
+**1.** I used Claude to help me design my custom chunking strategy. After looking at the campus_life documents, I explained that they were short and often separated into paragraphs with different ideas. Claude suggested using paragraph boundaries with a maximum size of about 400 characters and no overlap. I added this strategy to `chunker.py`, tested it, and checked five sample chunks to make sure they contained complete thoughts.
 
-**2.**
+**2.** I used Claude to help me evaluate the relevance cutoff. I collected the best retrieval distances for five questions that my corpus covers and five out-of-scope questions. Claude helped me compare the two groups and identify the gap between 0.4114 and 0.8246. Based on those results, I kept the cutoff at 0.6 because it accepted all five in-corpus questions and refused all five out-of-scope questions.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
